@@ -31,7 +31,14 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        ArrayList<Long> longInt = new ArrayList<Long>();
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.add(-1);
+        nums.add(-1);
+        nums.add(-1);
+        nums.add(1);
+        nums.add(6);
+
+        System.out.println(countNegative(nums));
     }
 
     /**
@@ -48,4 +55,27 @@ public class Main {
             nums[i] *= factor;
         }
     }
+
+    /**
+     * counts the number negative numbers in arraylist
+     * @param nums the input arraylist
+     * @return the number of negative numbers
+     */
+    public static int countNegative(ArrayList<Integer> nums) { //if it returns something it isnt void
+        if (nums == null) { //if check null should go before the variables
+            return 0;
+        }
+
+        int count = 0;
+
+        for (int num : nums) {
+            if (num < 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
 }
