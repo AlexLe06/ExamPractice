@@ -10,7 +10,7 @@ public class Main {
 
     1.B
     2.D
-    3.D
+    3.D (its actually C)
     4.B
     5.C
 
